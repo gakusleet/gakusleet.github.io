@@ -2,34 +2,152 @@
 <html>
 
 <head>
-  <!-- manifest.jsonã‚’å‘¼ã³å‡ºã—ã¦ã„ã¾ã™ -->
+  <!-- manifest.json‚ğŒÄ‚Ño‚µ‚Ä‚¢‚Ü‚· -->
   <link rel="manifest" href="./manifest.json">
   <script>
-    // service workerãŒæœ‰åŠ¹ãªã‚‰ã€service-worker.js ã‚’ç™»éŒ²ã—ã¾ã™
+    // service worker‚ª—LŒø‚È‚çAservice-worker.js ‚ğ“o˜^‚µ‚Ü‚·
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js').then(function () { console.log('Service Worker Registered'); });
     }
-  </script>
-  <title>Hello PWA.</title>
-  <style>
-    body {
-      text-align: center;
-      font-size: 40px;
-      vertical-align: middle;
+
+    function Item(_namae) {
+      this.name = _namae;
+      this.src = "img/" + _namae + ".jpg";
     }
 
-    .image {
-      width: 80%;
-      margin: auto;
-      display: block;
+    var list = [];
+    list[0] = new Item("01_ƒAƒLƒe[ƒkŒö—ƒAƒŠƒGƒm[ƒ‹(ƒCƒMƒŠƒX)");
+    list[1] = new Item("02_ƒAƒLƒe[ƒkŒö—ƒAƒŠƒGƒm[ƒ‹(ƒtƒ‰ƒ“ƒX)");
+    list[2] = new Item("03_ƒEƒBƒ‹ƒtƒŠƒbƒhEƒ[ƒŠƒG(ƒJƒiƒ_)");
+    list[3] = new Item("04_ƒNƒy(ƒ}ƒIƒŠ)");
+    list[4] = new Item("05_ƒNƒŠƒXƒeƒB[ƒi(ƒXƒEƒF[ƒfƒ“)");
+    list[5] = new Item("06_ƒXƒŒƒCƒ}ƒ“1¢(ƒIƒXƒ}ƒ“)");
+    list[6] = new Item("07_ƒfƒB[ƒh[(ƒtƒFƒjƒLƒA)");
+    list[7] = new Item("08_ƒpƒ`ƒƒƒNƒeƒB(ƒCƒ“ƒJ)");
+    list[8] = new Item("09_ƒ}ƒeƒBƒAƒXEƒRƒ‹ƒ”ƒBƒkƒX(ƒnƒ“ƒKƒŠ[)");
+    list[9] = new Item("10_ƒ}ƒ“ƒTEƒ€[ƒT(ƒ}ƒŠ)");
+    list[10] = new Item("11_ƒEƒBƒ‹ƒwƒ‹ƒ~ƒi(ƒIƒ‰ƒ“ƒ_)");
+    list[11] = new Item("12_ƒVƒƒƒJ(ƒY[ƒ‹[)");
+    list[12] = new Item("13_ƒ\ƒ“ƒhƒN(ŠØ‘)");
+    list[13] = new Item("14_ƒ^ƒ}ƒ‹(ƒOƒ‹ƒWƒA)");
+    list[14] = new Item("15_ƒ`ƒƒƒ“ƒhƒ‰ƒOƒvƒ^(ƒCƒ“ƒh)");
+    list[15] = new Item("16_ƒ`ƒ“ƒMƒXEƒnƒ“(ƒ‚ƒ“ƒSƒ‹)");
+    list[16] = new Item("17_ƒpƒEƒ“ƒhƒ[ƒJ[(ƒNƒŠ[)");
+    list[17] = new Item("18_ƒ‰ƒEƒ^ƒ(ƒ}ƒvƒ`ƒF)");
+    list[18] = new Item("19_ƒƒo[ƒgEƒuƒ‹[ƒX(ƒXƒRƒbƒgƒ‰ƒ“ƒh)");
+    list[19] = new Item("20_ƒAƒ}ƒjƒgƒŒ(ƒkƒrƒA)");
+    list[20] = new Item("21_ƒAƒŒƒLƒTƒ“ƒhƒƒX(ƒ}ƒPƒhƒjƒA)");
+    list[21] = new Item("22_ƒ”ƒBƒNƒgƒŠƒA(ƒCƒMƒŠƒX)");
+    list[22] = new Item("23_ƒJƒgƒŠ[ƒkEƒhEƒƒfƒBƒVƒX(ƒtƒ‰ƒ“ƒX)");
+    list[23] = new Item("24_ƒKƒ“ƒW[(ƒCƒ“ƒh)");
+    list[24] = new Item("25_ƒMƒ^[ƒ`ƒƒ(ƒCƒ“ƒhƒlƒVƒA)");
+    list[25] = new Item("26_ƒLƒ…ƒƒX(ƒyƒ‹ƒVƒA)");
+    list[26] = new Item("27_ƒMƒ‹ƒKƒƒVƒ…(ƒVƒ…ƒ[ƒ‹)");
+    list[27] = new Item("28_ƒNƒŒƒIƒpƒgƒ‰(ƒGƒWƒvƒg)");
+    list[28] = new Item("29_ƒSƒ‹ƒS[(ƒMƒŠƒVƒƒ)");
+    list[29] = new Item("30_ƒTƒ‰ƒfƒBƒ“(ƒAƒ‰ƒrƒA)");
+    list[30] = new Item("31_ƒWƒƒƒ„[ƒ”ƒ@ƒ‹ƒ}ƒ“7¢(ƒNƒ[ƒ‹)");
+    list[31] = new Item("32_ƒWƒ‡ƒ“EƒJ[ƒeƒBƒ“(ƒI[ƒXƒgƒ‰ƒŠƒA)");
+    list[32] = new Item("33_ƒeƒfƒBEƒ‹[ƒYƒxƒ‹ƒg(ƒAƒƒŠƒJ)");
+    list[33] = new Item("34_ƒgƒ~ƒ…ƒŠƒX(ƒXƒLƒ^ƒC)");
+    list[34] = new Item("35_ƒgƒ‰ƒ„ƒkƒX(ƒ[ƒ})");
+    list[35] = new Item("36_ƒsƒ‡[ƒgƒ‹(ƒƒVƒA)");
+    list[36] = new Item("37_ƒtƒFƒŠƒy2¢(ƒXƒyƒCƒ“)");
+    list[37] = new Item("38_ƒyƒhƒ2¢(ƒuƒ‰ƒWƒ‹)");
+    list[38] = new Item("39_ƒyƒŠƒNƒŒƒX(ƒMƒŠƒVƒƒ)");
+    list[39] = new Item("40_ƒ€ƒxƒ“ƒoEƒAEƒ“ƒWƒ“ƒK(ƒRƒ“ƒS)");
+    list[40] = new Item("41_ƒ‚ƒ“ƒeƒXƒ}(ƒAƒXƒeƒJ)");
+    list[41] = new Item("42_ƒ„ƒhƒ”ƒBƒK(ƒ|[ƒ‰ƒ“ƒh)");
+    list[42] = new Item("43_‰Õ—ó‰¤ƒn[ƒ‰ƒ‹3¢(ƒmƒ‹ƒEƒF[)");
+    list[43] = new Item("44_nc’é(’†‘)");
+    list[44] = new Item("45_Ô•E‰¤ƒtƒŠ[ƒhƒŠƒq1¢(ƒhƒCƒc)");
+    list[45] = new Item("46_–kğ@(“ú–{)");
+
+    function createSelectItem() {
+      for (var i = 0; i < list.length; i++) {
+        let op = document.createElement("option");
+        op.value = list[i].src;
+        op.text = list[i].name;
+        document.getElementById("selectlist").appendChild(op);
+      }
     }
+
+    function selectItem() {
+      // alert(document.main.selectlist.selectedIndex);
+      // alert(document.getElementById("selectlist").selectedItem);
+
+      var index = document.main.selectlist.selectedIndex;
+      var objImg = document.main.img;
+
+      // console.log(document.main.selectlist.value);
+      document.main.img.src = document.main.selectlist.value;
+
+      // if(index == 0) {
+      //  objImg.visivle = "hidden";
+      // }
+      // else {
+      //   objImg.visivle = true;
+      // }
+
+      // if(index == 1)
+      // {
+      //   objImg.src = "img/01_ƒAƒLƒe[ƒkŒö—ƒAƒŠƒGƒm[ƒ‹(ƒCƒMƒŠƒX).jpg";
+      // }
+      // else if (index == 2) {
+      //   objImg.src = "img/02_ƒAƒLƒe[ƒkŒö—ƒAƒŠƒGƒm[ƒ‹(ƒtƒ‰ƒ“ƒX).jpg";
+      // }
+    }
+
+  </script>
+  <title>Civ6 SG.</title>
+  <style>
+    .body {
+      overflow: hidden;
+    }
+
+    .main {
+      display: flex;
+      flex-direction:column;
+      flex:1;
+      background-color:antiquewhite;
+      overflow: hidden;
+    }
+    .title {
+      height:70px;
+      font-size: 3rem;
+      padding-left:10px;
+    }
+    .select {
+      height:60px;
+      width:800px;
+      font-size: 2.4rem;
+      margin-top:4px;
+      margin-left:10px;
+    }
+
+    .flex1 {
+      margin-top:10px;
+      height:calc(100vh - 170px);
+      background-color:#0F2B43;
+    }
+    .img {
+      object-fit: contain;
+      width:100%;
+      height:100%;
+    }
+
   </style>
 </head>
 
-<body>
-  <h1>Hello PWA.</h1>
-  <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
-  <a href="p.html">p.html</a>
+<body onload="createSelectItem()">
+  <form name="main" class="main" >
+    <div class="title">Civ6 SG w“±Ò</div>
+    <select id="selectlist" name="selectlist" class="select" onchange="selectItem()">
+    </select>
+    <div class="flex1">
+      <img name="img" class="img">
+    </div>
+  </form>
 </body>
 
 </html>
