@@ -2,10 +2,10 @@
 <html>
 
 <head>
-  <!-- manifest.json‚ğŒÄ‚Ño‚µ‚Ä‚¢‚Ü‚· -->
+  <!-- manifest.jsonã‚’å‘¼ã³å‡ºã—ã¦ã„ã¾ã™ -->
   <link rel="manifest" href="./manifest.json">
   <script>
-    // service worker‚ª—LŒø‚È‚çAservice-worker.js ‚ğ“o˜^‚µ‚Ü‚·
+    // service workerãŒæœ‰åŠ¹ãªã‚‰ã€service-worker.js ã‚’ç™»éŒ²ã—ã¾ã™
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js').then(function () { console.log('Service Worker Registered'); });
     }
@@ -16,52 +16,52 @@
     }
 
     var list = [];
-    list[0] = new Item("01_ƒAƒLƒe[ƒkŒö—ƒAƒŠƒGƒm[ƒ‹(ƒCƒMƒŠƒX)");
-    list[1] = new Item("02_ƒAƒLƒe[ƒkŒö—ƒAƒŠƒGƒm[ƒ‹(ƒtƒ‰ƒ“ƒX)");
-    list[2] = new Item("03_ƒEƒBƒ‹ƒtƒŠƒbƒhEƒ[ƒŠƒG(ƒJƒiƒ_)");
-    list[3] = new Item("04_ƒNƒy(ƒ}ƒIƒŠ)");
-    list[4] = new Item("05_ƒNƒŠƒXƒeƒB[ƒi(ƒXƒEƒF[ƒfƒ“)");
-    list[5] = new Item("06_ƒXƒŒƒCƒ}ƒ“1¢(ƒIƒXƒ}ƒ“)");
-    list[6] = new Item("07_ƒfƒB[ƒh[(ƒtƒFƒjƒLƒA)");
-    list[7] = new Item("08_ƒpƒ`ƒƒƒNƒeƒB(ƒCƒ“ƒJ)");
-    list[8] = new Item("09_ƒ}ƒeƒBƒAƒXEƒRƒ‹ƒ”ƒBƒkƒX(ƒnƒ“ƒKƒŠ[)");
-    list[9] = new Item("10_ƒ}ƒ“ƒTEƒ€[ƒT(ƒ}ƒŠ)");
-    list[10] = new Item("11_ƒEƒBƒ‹ƒwƒ‹ƒ~ƒi(ƒIƒ‰ƒ“ƒ_)");
-    list[11] = new Item("12_ƒVƒƒƒJ(ƒY[ƒ‹[)");
-    list[12] = new Item("13_ƒ\ƒ“ƒhƒN(ŠØ‘)");
-    list[13] = new Item("14_ƒ^ƒ}ƒ‹(ƒOƒ‹ƒWƒA)");
-    list[14] = new Item("15_ƒ`ƒƒƒ“ƒhƒ‰ƒOƒvƒ^(ƒCƒ“ƒh)");
-    list[15] = new Item("16_ƒ`ƒ“ƒMƒXEƒnƒ“(ƒ‚ƒ“ƒSƒ‹)");
-    list[16] = new Item("17_ƒpƒEƒ“ƒhƒ[ƒJ[(ƒNƒŠ[)");
-    list[17] = new Item("18_ƒ‰ƒEƒ^ƒ(ƒ}ƒvƒ`ƒF)");
-    list[18] = new Item("19_ƒƒo[ƒgEƒuƒ‹[ƒX(ƒXƒRƒbƒgƒ‰ƒ“ƒh)");
-    list[19] = new Item("20_ƒAƒ}ƒjƒgƒŒ(ƒkƒrƒA)");
-    list[20] = new Item("21_ƒAƒŒƒLƒTƒ“ƒhƒƒX(ƒ}ƒPƒhƒjƒA)");
-    list[21] = new Item("22_ƒ”ƒBƒNƒgƒŠƒA(ƒCƒMƒŠƒX)");
-    list[22] = new Item("23_ƒJƒgƒŠ[ƒkEƒhEƒƒfƒBƒVƒX(ƒtƒ‰ƒ“ƒX)");
-    list[23] = new Item("24_ƒKƒ“ƒW[(ƒCƒ“ƒh)");
-    list[24] = new Item("25_ƒMƒ^[ƒ`ƒƒ(ƒCƒ“ƒhƒlƒVƒA)");
-    list[25] = new Item("26_ƒLƒ…ƒƒX(ƒyƒ‹ƒVƒA)");
-    list[26] = new Item("27_ƒMƒ‹ƒKƒƒVƒ…(ƒVƒ…ƒ[ƒ‹)");
-    list[27] = new Item("28_ƒNƒŒƒIƒpƒgƒ‰(ƒGƒWƒvƒg)");
-    list[28] = new Item("29_ƒSƒ‹ƒS[(ƒMƒŠƒVƒƒ)");
-    list[29] = new Item("30_ƒTƒ‰ƒfƒBƒ“(ƒAƒ‰ƒrƒA)");
-    list[30] = new Item("31_ƒWƒƒƒ„[ƒ”ƒ@ƒ‹ƒ}ƒ“7¢(ƒNƒ[ƒ‹)");
-    list[31] = new Item("32_ƒWƒ‡ƒ“EƒJ[ƒeƒBƒ“(ƒI[ƒXƒgƒ‰ƒŠƒA)");
-    list[32] = new Item("33_ƒeƒfƒBEƒ‹[ƒYƒxƒ‹ƒg(ƒAƒƒŠƒJ)");
-    list[33] = new Item("34_ƒgƒ~ƒ…ƒŠƒX(ƒXƒLƒ^ƒC)");
-    list[34] = new Item("35_ƒgƒ‰ƒ„ƒkƒX(ƒ[ƒ})");
-    list[35] = new Item("36_ƒsƒ‡[ƒgƒ‹(ƒƒVƒA)");
-    list[36] = new Item("37_ƒtƒFƒŠƒy2¢(ƒXƒyƒCƒ“)");
-    list[37] = new Item("38_ƒyƒhƒ2¢(ƒuƒ‰ƒWƒ‹)");
-    list[38] = new Item("39_ƒyƒŠƒNƒŒƒX(ƒMƒŠƒVƒƒ)");
-    list[39] = new Item("40_ƒ€ƒxƒ“ƒoEƒAEƒ“ƒWƒ“ƒK(ƒRƒ“ƒS)");
-    list[40] = new Item("41_ƒ‚ƒ“ƒeƒXƒ}(ƒAƒXƒeƒJ)");
-    list[41] = new Item("42_ƒ„ƒhƒ”ƒBƒK(ƒ|[ƒ‰ƒ“ƒh)");
-    list[42] = new Item("43_‰Õ—ó‰¤ƒn[ƒ‰ƒ‹3¢(ƒmƒ‹ƒEƒF[)");
-    list[43] = new Item("44_nc’é(’†‘)");
-    list[44] = new Item("45_Ô•E‰¤ƒtƒŠ[ƒhƒŠƒq1¢(ƒhƒCƒc)");
-    list[45] = new Item("46_–kğ@(“ú–{)");
+    list[0] = new Item("01_ã‚¢ã‚­ãƒ†ãƒ¼ãƒŒå…¬å¥³ã‚¢ãƒªã‚¨ãƒãƒ¼ãƒ«(ã‚¤ã‚®ãƒªã‚¹)");
+    list[1] = new Item("02_ã‚¢ã‚­ãƒ†ãƒ¼ãƒŒå…¬å¥³ã‚¢ãƒªã‚¨ãƒãƒ¼ãƒ«(ãƒ•ãƒ©ãƒ³ã‚¹)");
+    list[2] = new Item("03_ã‚¦ã‚£ãƒ«ãƒ•ãƒªãƒƒãƒ‰ãƒ»ãƒ­ãƒ¼ãƒªã‚¨(ã‚«ãƒŠãƒ€)");
+    list[3] = new Item("04_ã‚¯ãƒš(ãƒã‚ªãƒª)");
+    list[4] = new Item("05_ã‚¯ãƒªã‚¹ãƒ†ã‚£ãƒ¼ãƒŠ(ã‚¹ã‚¦ã‚§ãƒ¼ãƒ‡ãƒ³)");
+    list[5] = new Item("06_ã‚¹ãƒ¬ã‚¤ãƒãƒ³1ä¸–(ã‚ªã‚¹ãƒãƒ³)");
+    list[6] = new Item("07_ãƒ‡ã‚£ãƒ¼ãƒ‰ãƒ¼(ãƒ•ã‚§ãƒ‹ã‚­ã‚¢)");
+    list[7] = new Item("08_ãƒ‘ãƒãƒ£ã‚¯ãƒ†ã‚£(ã‚¤ãƒ³ã‚«)");
+    list[8] = new Item("09_ãƒãƒ†ã‚£ã‚¢ã‚¹ãƒ»ã‚³ãƒ«ãƒ´ã‚£ãƒŒã‚¹(ãƒãƒ³ã‚¬ãƒªãƒ¼)");
+    list[9] = new Item("10_ãƒãƒ³ã‚µãƒ»ãƒ ãƒ¼ã‚µ(ãƒãƒª)");
+    list[10] = new Item("11_ã‚¦ã‚£ãƒ«ãƒ˜ãƒ«ãƒŸãƒŠ(ã‚ªãƒ©ãƒ³ãƒ€)");
+    list[11] = new Item("12_ã‚·ãƒ£ã‚«(ã‚ºãƒ¼ãƒ«ãƒ¼)");
+    list[12] = new Item("13_ã‚½ãƒ³ãƒ‰ã‚¯(éŸ“å›½)");
+    list[13] = new Item("14_ã‚¿ãƒãƒ«(ã‚°ãƒ«ã‚¸ã‚¢)");
+    list[14] = new Item("15_ãƒãƒ£ãƒ³ãƒ‰ãƒ©ã‚°ãƒ—ã‚¿(ã‚¤ãƒ³ãƒ‰)");
+    list[15] = new Item("16_ãƒãƒ³ã‚®ã‚¹ãƒ»ãƒãƒ³(ãƒ¢ãƒ³ã‚´ãƒ«)");
+    list[16] = new Item("17_ãƒ‘ã‚¦ãƒ³ãƒ‰ãƒ¡ãƒ¼ã‚«ãƒ¼(ã‚¯ãƒªãƒ¼)");
+    list[17] = new Item("18_ãƒ©ã‚¦ã‚¿ãƒ­(ãƒãƒ—ãƒã‚§)");
+    list[18] = new Item("19_ãƒ­ãƒãƒ¼ãƒˆãƒ»ãƒ–ãƒ«ãƒ¼ã‚¹(ã‚¹ã‚³ãƒƒãƒˆãƒ©ãƒ³ãƒ‰)");
+    list[19] = new Item("20_ã‚¢ãƒãƒ‹ãƒˆãƒ¬(ãƒŒãƒ“ã‚¢)");
+    list[20] = new Item("21_ã‚¢ãƒ¬ã‚­ã‚µãƒ³ãƒ‰ãƒ­ã‚¹(ãƒã‚±ãƒ‰ãƒ‹ã‚¢)");
+    list[21] = new Item("22_ãƒ´ã‚£ã‚¯ãƒˆãƒªã‚¢(ã‚¤ã‚®ãƒªã‚¹)");
+    list[22] = new Item("23_ã‚«ãƒˆãƒªãƒ¼ãƒŒãƒ»ãƒ‰ãƒ»ãƒ¡ãƒ‡ã‚£ã‚·ã‚¹(ãƒ•ãƒ©ãƒ³ã‚¹)");
+    list[23] = new Item("24_ã‚¬ãƒ³ã‚¸ãƒ¼(ã‚¤ãƒ³ãƒ‰)");
+    list[24] = new Item("25_ã‚®ã‚¿ãƒ¼ãƒãƒ£(ã‚¤ãƒ³ãƒ‰ãƒã‚·ã‚¢)");
+    list[25] = new Item("26_ã‚­ãƒ¥ãƒ­ã‚¹(ãƒšãƒ«ã‚·ã‚¢)");
+    list[26] = new Item("27_ã‚®ãƒ«ã‚¬ãƒ¡ã‚·ãƒ¥(ã‚·ãƒ¥ãƒ¡ãƒ¼ãƒ«)");
+    list[27] = new Item("28_ã‚¯ãƒ¬ã‚ªãƒ‘ãƒˆãƒ©(ã‚¨ã‚¸ãƒ—ãƒˆ)");
+    list[28] = new Item("29_ã‚´ãƒ«ã‚´ãƒ¼(ã‚®ãƒªã‚·ãƒ£)");
+    list[29] = new Item("30_ã‚µãƒ©ãƒ‡ã‚£ãƒ³(ã‚¢ãƒ©ãƒ“ã‚¢)");
+    list[30] = new Item("31_ã‚¸ãƒ£ãƒ¤ãƒ¼ãƒ´ã‚¡ãƒ«ãƒãƒ³7ä¸–(ã‚¯ãƒ¡ãƒ¼ãƒ«)");
+    list[31] = new Item("32_ã‚¸ãƒ§ãƒ³ãƒ»ã‚«ãƒ¼ãƒ†ã‚£ãƒ³(ã‚ªãƒ¼ã‚¹ãƒˆãƒ©ãƒªã‚¢)");
+    list[32] = new Item("33_ãƒ†ãƒ‡ã‚£ãƒ»ãƒ«ãƒ¼ã‚ºãƒ™ãƒ«ãƒˆ(ã‚¢ãƒ¡ãƒªã‚«)");
+    list[33] = new Item("34_ãƒˆãƒŸãƒ¥ãƒªã‚¹(ã‚¹ã‚­ã‚¿ã‚¤)");
+    list[34] = new Item("35_ãƒˆãƒ©ãƒ¤ãƒŒã‚¹(ãƒ­ãƒ¼ãƒ)");
+    list[35] = new Item("36_ãƒ”ãƒ§ãƒ¼ãƒˆãƒ«(ãƒ­ã‚·ã‚¢)");
+    list[36] = new Item("37_ãƒ•ã‚§ãƒªãƒš2ä¸–(ã‚¹ãƒšã‚¤ãƒ³)");
+    list[37] = new Item("38_ãƒšãƒ‰ãƒ­2ä¸–(ãƒ–ãƒ©ã‚¸ãƒ«)");
+    list[38] = new Item("39_ãƒšãƒªã‚¯ãƒ¬ã‚¹(ã‚®ãƒªã‚·ãƒ£)");
+    list[39] = new Item("40_ãƒ ãƒ™ãƒ³ãƒãƒ»ã‚¢ãƒ»ãƒ³ã‚¸ãƒ³ã‚¬(ã‚³ãƒ³ã‚´)");
+    list[40] = new Item("41_ãƒ¢ãƒ³ãƒ†ã‚¹ãƒ(ã‚¢ã‚¹ãƒ†ã‚«)");
+    list[41] = new Item("42_ãƒ¤ãƒ‰ãƒ´ã‚£ã‚¬(ãƒãƒ¼ãƒ©ãƒ³ãƒ‰)");
+    list[42] = new Item("43_è‹›çƒˆç‹ãƒãƒ¼ãƒ©ãƒ«3ä¸–(ãƒãƒ«ã‚¦ã‚§ãƒ¼)");
+    list[43] = new Item("44_å§‹çš‡å¸(ä¸­å›½)");
+    list[44] = new Item("45_èµ¤é«­ç‹ãƒ•ãƒªãƒ¼ãƒ‰ãƒªãƒ’1ä¸–(ãƒ‰ã‚¤ãƒ„)");
+    list[45] = new Item("46_åŒ—æ¡æ™‚å®—(æ—¥æœ¬)");
 
     function createSelectItem() {
       for (var i = 0; i < list.length; i++) {
@@ -91,10 +91,10 @@
 
       // if(index == 1)
       // {
-      //   objImg.src = "img/01_ƒAƒLƒe[ƒkŒö—ƒAƒŠƒGƒm[ƒ‹(ƒCƒMƒŠƒX).jpg";
+      //   objImg.src = "img/01_ã‚¢ã‚­ãƒ†ãƒ¼ãƒŒå…¬å¥³ã‚¢ãƒªã‚¨ãƒãƒ¼ãƒ«(ã‚¤ã‚®ãƒªã‚¹).jpg";
       // }
       // else if (index == 2) {
-      //   objImg.src = "img/02_ƒAƒLƒe[ƒkŒö—ƒAƒŠƒGƒm[ƒ‹(ƒtƒ‰ƒ“ƒX).jpg";
+      //   objImg.src = "img/02_ã‚¢ã‚­ãƒ†ãƒ¼ãƒŒå…¬å¥³ã‚¢ãƒªã‚¨ãƒãƒ¼ãƒ«(ãƒ•ãƒ©ãƒ³ã‚¹).jpg";
       // }
     }
 
@@ -141,7 +141,7 @@
 
 <body onload="createSelectItem()">
   <form name="main" class="main" >
-    <div class="title">Civ6 SG w“±Ò</div>
+    <div class="title">Civ6 SG æŒ‡å°è€…</div>
     <select id="selectlist" name="selectlist" class="select" onchange="selectItem()">
     </select>
     <div class="flex1">
